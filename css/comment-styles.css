@@ -1,0 +1,38 @@
+
+.comment-row {
+	text-align: left;
+	display: block;
+	border-bottom: 1px solid grey;
+	margin-bottom: 10px;
+}
+
+h3#comments {
+	font-size: 23px;
+	margin-bottom: 10px;
+	color: #e9e0eb;
+}
+
+.comment-row .comment {
+	font-size: 17px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.comment-row .createdAt {
+	font-size: 10px;
+	float:right;
+}
+
+.comment-row .atMoment:hover{
+	color: green;
+}
+
+.comment-row .atMoment{
+	cursor: pointer;
+	color: #97BF0E;
+}
+
+.comment-row .user{
+	font-weight: bold;
+	color: #8f246b;
+}

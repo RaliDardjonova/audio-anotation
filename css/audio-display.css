@@ -1,0 +1,286 @@
+
+
+body {
+	background: #262626;
+	font-family: 'lato', sans-serif;
+}
+
+body:after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+	content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/play.svg)
+		url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/pause.svg),
+		url(img/mute2.png);
+}
+
+.show-audio{
+	position: absolute;
+	width: 60%;
+	height: 300px;
+	top: 40px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	padding: 50px 5%;
+}
+
+.input-comment{
+	padding: 0.75rem;
+	color: #3A3F44;
+	width: 60%;
+	border-width: thin;
+	border-style: solid;
+	border-color: #8e917f;
+	background-color: #e9e0eb;
+}
+
+
+.cont{
+	font-family: 'lato', sans-serif;
+	margin-bottom: 28px;
+}
+
+.cont h3{
+	font-size: 50px;
+	margin: 0 0 10px 0;
+	/*color: #ccc;*/
+	color: #cc3399;
+}
+
+.cont .user{
+	font-size: 17px;
+	color: #999;
+	font-weight: bold;
+}
+
+.description{
+	float:left;
+	font-family: 'lato', sans-serif;
+	font-size: 17px;
+	color: #999;
+	text-align: left;
+	display: block;
+	word-wrap: break-word;
+	margin-bottom: 10px;
+	width: 100%;
+}
+/*
+*style audio tag
+*/
+
+.mejs__container {
+	background: #000;
+	font-family: Helvetica, Arial;
+	text-align: left;
+	vertical-align: top;
+	text-indent: 0;
+	width: 100% !important;
+	height: 50px !important;
+	border-radius: 5px;
+}
+
+.mejs__container .mejs__controls {
+	height: 100%;
+	background: transparent;
+	display: flex;
+}
+
+.mejs__controls .mejs__time-rail span{
+	width: 400px;
+	height: 100%;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+.mejs__time-rail .mejs__time-handle {
+	display: none;
+}
+
+.mejs__controls .mejs__time-rail a {
+	display: block;
+	width: 400px;
+	height: 100%;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+ .mejs__controls .mejs__horizontal-volume-total{
+	display:block;
+	display: flex;
+	float: left;
+	width: 500px;
+	margin-left: -150px;
+	margin-top: -10px;
+}
+
+.mejs__controls div.mejs__time-rail {
+	padding-top: initial;
+	height: 100%;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-total {
+	margin: 0;
+}
+
+.mejs__container .mejs__controls .mejs__time {
+	color: #fff;
+	display: block;
+	height: 27px;
+	width: auto;
+	padding: 0;
+	line-height: 25px;
+	overflow: hidden;
+	text-align: center;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.mejs__container .mejs__controls .mejs__time {
+	position: absolute;
+	color: rgba(256, 256, 256, 0.5);
+	right: 10px;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	font-family: 'lato', sans-serif;
+	font-size: 32px;
+	pointer-events: none;
+	font-weight: normal;
+}
+
+.mejs__time .mejs__duration{
+	color: transparent;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-float-corner {
+	display: none;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-float {
+	position: absolute;
+	background: transparent;
+	width: 46px;
+	height: 20px;
+	border: none;
+	top: -25px;
+	margin-left: -18px;
+	text-align: center;
+	color: pink;
+	border-radius: 3px;
+}
+
+
+.mejs__controls .mejs__time-rail .mejs__time-float-current {
+	margin: 0;
+	margin-top: 4px;
+	width: 100%;
+	display: block;
+	text-align: center;
+	left: 0;
+}
+
+.mejs__container .mejs__controls div {
+	height: 100%;
+	width: 50px;
+	position: relative;
+}
+
+.mejs__controls .mejs__button button {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	border: 0 !important;
+	background: transparent;
+	outline: none;
+}
+
+.mejs__controls .mejs__play:after {
+	position: absolute;
+	content: "";
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/play.svg) no-repeat;
+	width: 17px;
+	height: 22px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	transition: all 100ms linear;
+	pointer-events: none;
+}
+
+.mejs__controls .mejs__pause:after {
+	position: absolute;
+	content: "";
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/pause.svg) no-repeat;
+	width: 13px;
+	height: 22px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	transition: all 100ms linear;
+	pointer-events: none;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-total {
+	background: #292929;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-loaded {
+	background: #3c3838;
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+	background-image: -moz-linear-gradient( -45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+	animation: move 3s linear infinite;
+	opacity: 0.1;
+}
+
+.mejs__controls .mejs__time-rail .mejs__time-current {
+	background: linear-gradient(to right, #8f246b, #97BF0E);
+}
+
+.mejs__controls .mejs__button button:focus {
+	outline: none;
+}
+
+
+.mejs__controls .mejs__replay:after {
+	position: absolute;
+	content: "";
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/163884/play.svg) no-repeat;
+	width: 17px;
+	height: 22px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	transition: all 100ms linear;
+	pointer-events: none;
+}
+
+.mejs__controls .mejs__button .mejs__volume-button {
+	margin-left: -100px;
+}
+
+.mejs__controls .mejs__mute {
+	right: 43px;
+	background: url("../img/mute.png") no-repeat;
+	background-size: cover;
+}
+
+.mejs__controls .mejs__unmute {
+	right: 43px;
+	background: url("../img/unmute.png") no-repeat;
+	background-size: cover;
+}

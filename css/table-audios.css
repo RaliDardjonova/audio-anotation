@@ -1,0 +1,60 @@
+table.audios{
+  table-layout:fixed;
+  display: table;
+  width: 100%;
+  font-family: 'lato', sans-serif;
+}
+
+th.audios {
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  padding: 1%;
+  background-color: #8f246b;
+  color: white;
+  }
+
+tr.audios {
+width: 100%;
+height: 70px;
+text-align: center;
+padding: 1%;
+background-color:  #c7b1ce;
+color: #666699;
+display: table-row;
+border: 1px solid gray;
+}
+
+th.audios :nth-child(even) {background-color: #e6ccff}
+
+tr.products_bottom {
+width: 100%;
+height: 70px;
+text-align: center;
+padding: 15px;
+background-color: #e0e0eb;
+color: #666699;
+display: table-row;
+border: none;
+}
+
+.audios input[type="submit"] {
+  background-color: #97BF0E;
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  color: #3A3F44;
+  width: 100%;
+  border-width: thin;
+  border-style: solid;
+  border-color: #8e917f;
+  float: left;
+}
+.audios input[type="submit"]:focus, .audios input[type="submit"]:hover {
+  background-color: #67820a;
+}
+
+td.audios{
+  word-wrap: break-word;
+}
