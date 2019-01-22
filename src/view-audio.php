@@ -1,10 +1,10 @@
 <?php
+    include('../config.php');
     session_start();
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $dbname = "Proekt";
-
+    $servername = $DB_HOST;
+    $username = $DB_USER;
+    $password = $DB_PASS;
+    $dbname = $DB_NAME;
     try {
       $conn = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

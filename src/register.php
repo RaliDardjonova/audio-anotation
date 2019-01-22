@@ -1,8 +1,9 @@
 <?php
-  $servername = "127.0.0.1";
-  $username = "root";
-  $password = "";
-  $dbname = "Proekt";
+include('../config.php');
+$servername = $DB_HOST;
+$username = $DB_USER;
+$password = $DB_PASS;
+$dbname = $DB_NAME;
 
   # Establishing connection with database
   try {
