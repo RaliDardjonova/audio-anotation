@@ -14,15 +14,18 @@
   catch(PDOException $e){
     echo "Connection failed: " . $e->getMessage();
   }
-
+//header("Location: view-audio.php?index.php");
   $insertComment = $conn->prepare("INSERT INTO Comment (Username, Audioname, Comment, AtMoment) VALUES (?,?,?,?)");
+  echo var_dump($_POST);
 
   if($_POST){
+    echo "weqe";
     $comment = $_POST['comment'];
     $atMoment = $_POST['time'];
     $username = $_SESSION['login_user'];
     $audioname = $_POST['audioname'];
+    echo $comment;
     $insertComment->execute([$username, $audioname, $comment, $atMoment]);
-    header("Location: view-audio.php?audio=".$audioname."&atMoment=".$atMoment);
+  //  header("Location: view-audio.php?audio=".$audioname."&atMoment=".$atMoment);
   }
 ?>

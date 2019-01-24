@@ -36,3 +36,13 @@ h3#comments {
 	font-weight: bold;
 	color: #8f246b;
 }
+
+.select-time{
+	display: block;
+	float:right;
+}
+
+.export-button{
+	display: block;
+	float:right;
+}
